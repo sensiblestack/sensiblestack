@@ -20,16 +20,25 @@ article h1{font-size:32px;line-height:1.25}
 footer.site{background:var(--ink);color:#cfd6cd;padding:26px 20px;font-size:14px}
 footer.site a{color:#e8e2d2}
 table{border-collapse:collapse}td,th{border:1px solid var(--line);padding:6px 10px}
-.reviewhead{display:flex;gap:14px;align-items:center;margin:10px 0 2px}
-.reviewhead img{width:54px;height:54px;object-fit:contain}
-.chip{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:2px 11px;font-size:12.5px;letter-spacing:.4px}
-.scorecard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0 20px}
-.scorecard h3{margin:0 0 8px;font-size:17px}
-.scorecard .big{font-size:32px;font-weight:700;margin-right:8px}
-.scorerow{display:grid;grid-template-columns:168px 1fr 26px;gap:10px;align-items:center;font-size:14px;margin:3px 0}
+.reviewhead{display:flex;gap:16px;align-items:center;margin:14px 0 6px}
+.reviewhead img{width:60px;height:60px;object-fit:contain}
+.chip{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:3px 12px;font-size:12.5px;letter-spacing:.5px}
+.scorecard{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:10px;padding:18px 20px;margin:16px 0 22px;box-shadow:0 2px 10px rgba(22,40,60,.06)}
+.scorecard h3{margin:0 0 10px;font-size:17px}
+.scorecard .big{font-size:36px;font-weight:700;margin-right:8px;color:var(--ink)}
+.scorerow{display:grid;grid-template-columns:190px 1fr 30px;gap:12px;align-items:center;font-size:14.5px;margin:4px 0}
+.scorerow b{text-align:right;font-size:15px}
 .bar{background:#eee7d7;border-radius:4px;height:9px}.bar i{display:block;background:var(--accent);height:9px;border-radius:4px}
 .ratings{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
-.ratings span{background:#f4efe2;border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:13.5px}
+.ratings span{background:#f4efe2;border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:14px}
+.ratings strong{color:var(--accent);font-size:15px}
 figure.shot{margin:20px 0}figure.shot img{width:100%;border:1px solid var(--line);border-radius:10px}
 figure.shot figcaption{font-size:13px;color:var(--muted);margin-top:6px}
 .toolcard img{width:44px;height:44px;object-fit:contain;margin-bottom:6px}
+.card{transition:box-shadow .15s ease}.card:hover{box-shadow:0 3px 12px rgba(22,40,60,.10)}
+.btn:hover{filter:brightness(1.08)}
+article h1{letter-spacing:.2px}
+article p{margin:0 0 14px}
+blockquote{border-left:3px solid var(--accent);margin:16px 0;padding:4px 0 4px 14px;color:var(--muted);font-style:italic}
+header.site{box-shadow:0 1px 6px rgba(22,40,60,.25)}
+@media (max-width:600px){.scorerow{grid-template-columns:128px 1fr 26px;font-size:13.5px}.scorecard{padding:14px}.hero h1{font-size:32px}article h1{font-size:26px}}
