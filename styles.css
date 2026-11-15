@@ -118,3 +118,28 @@ footer.site a:hover{color:var(--amber)}
   header.site{padding:10px 16px}
   nav.main{gap:14px}
 }
+
+/* Premium polish pass */
+::selection{background:var(--amber);color:var(--teal-dark)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:4px}
+h1,h2{text-wrap:balance}
+.hero-home{position:relative;overflow:hidden}
+.hero-home::before{content:"";position:absolute;inset:0;background:radial-gradient(560px 300px at 88% -10%,rgba(127,198,184,.35),transparent 65%),radial-gradient(420px 240px at -5% 110%,rgba(242,169,59,.18),transparent 60%);pointer-events:none}
+.hero-home>*{position:relative;z-index:1}
+.scorecard{background:linear-gradient(180deg,#ffffff,#FAFCFB)}
+figure.shot img{transition:box-shadow .2s ease}
+figure.shot:hover img{box-shadow:var(--shadow-lift)}
+tr:nth-child(even) td{background:#FAFCFB}
+footer.site{border-top:4px solid var(--amber)}
+.card .btn{margin-top:4px}
+@media (max-width:640px){
+  header.site{flex-wrap:nowrap;gap:12px;padding:10px 14px}
+  header.site .brand{flex:0 0 auto}
+  header.site .brand img{height:34px}
+  nav.main{flex-wrap:nowrap;overflow-x:auto;gap:16px;padding-bottom:2px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  nav.main::-webkit-scrollbar{display:none}
+  nav.main a{white-space:nowrap;font-size:14.5px}
+  .wrap{padding:20px 16px 48px}
+  .hero-home{padding:26px 20px;border-radius:18px}
+  .btn{padding:10px 18px}
+}
