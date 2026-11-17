@@ -145,3 +145,6 @@ footer.site{border-top:4px solid var(--amber)}
 }
 
 .brandname{font-weight:800;color:#0E3A45;font-size:1.3rem;letter-spacing:-.01em}
+a.brandname{text-decoration:none}
+a.brandname:hover{color:var(--amber-dark)}
+.card .vslogos a.vslink{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
