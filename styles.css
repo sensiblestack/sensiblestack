@@ -148,3 +148,10 @@ footer.site{border-top:4px solid var(--amber)}
 a.brandname{text-decoration:none}
 a.brandname:hover{color:var(--amber-dark)}
 .card .vslogos a.vslink{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+
+.hasdrop{position:relative;display:inline-flex}
+.hasdrop .drop{display:none;position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(14,58,69,.16);padding:8px;min-width:220px;z-index:60;flex-direction:column;gap:2px}
+.hasdrop:hover .drop,.hasdrop:focus-within .drop{display:flex}
+.hasdrop .drop a{padding:8px 10px;border-bottom:none;border-radius:8px;white-space:nowrap}
+.hasdrop .drop a:hover{background:#EEF4F3;border-bottom:none}
+.hasdrop>a::after{content:" \25BE";font-size:11px}
