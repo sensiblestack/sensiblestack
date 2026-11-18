@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Upwork interface placeholder">
+<rect width="800" height="450" fill="#f4f6f8"/>
+<rect x="0" y="0" width="800" height="46" fill="#123332"/>
+<circle cx="28" cy="23" r="7" fill="#2fbf9b"/><circle cx="52" cy="23" r="7" fill="#e8ecef"/><circle cx="76" cy="23" r="7" fill="#e8ecef"/>
+<text x="110" y="30" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Upwork</text>
+<rect x="60" y="70" width="680" height="44" rx="6" fill="#ffffff"/><rect x="76" y="84" width="300" height="16" rx="6" fill="#9fb3b8"/><rect x="660" y="80" width="64" height="24" rx="6" fill="#2fbf9b"/><rect x="60" y="134" width="680" height="64" rx="6" fill="#ffffff"/><rect x="76" y="150" width="34" height="34" rx="6" fill="#123332"/><rect x="126" y="148" width="240" height="15" rx="6" fill="#5b6b6a"/><rect x="126" y="172" width="420" height="12" rx="6" fill="#dfe6ea"/><rect x="60" y="214" width="680" height="64" rx="6" fill="#ffffff"/><rect x="76" y="230" width="34" height="34" rx="6" fill="#2fbf9b"/><rect x="126" y="228" width="240" height="15" rx="6" fill="#5b6b6a"/><rect x="126" y="252" width="420" height="12" rx="6" fill="#dfe6ea"/><rect x="60" y="294" width="680" height="64" rx="6" fill="#ffffff"/><rect x="76" y="310" width="34" height="34" rx="6" fill="#123332"/><rect x="126" y="308" width="240" height="15" rx="6" fill="#5b6b6a"/><rect x="126" y="332" width="420" height="12" rx="6" fill="#dfe6ea"/>
+<text x="400" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#123332">Upwork</text>
+<text x="400" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#5b6b6a">Interface placeholder, real capture to follow</text>
+</svg>
