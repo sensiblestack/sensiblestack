@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><meta name="theme-color" content="#0E3A45">
+<title>Your Jotform Notifications Stopped Arriving | The Journal | Sensible Stack</title>
+<meta name="description" content="Your Jotform submissions are arriving but the notification emails have stopped, and the test button says everything is fine. The cause is Jotform's bounce list, and here is the fix.">
+<link rel="stylesheet" href="../../styles.css"><link rel="icon" type="image/svg+xml" href="../../assets/brand/icon.svg"><link rel="apple-touch-icon" href="../../assets/brand/icon.svg"><script async src="https://www.googletagmanager.com/gtag/js?id=G-CH4Z3K8NZY"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CH4Z3K8NZY');</script>
+<style>
+.checkhero{background:#0E3A45;border-radius:18px;padding:34px 30px;color:#fff;margin:18px 0 8px}
+.checkhero .bars{display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
+.checkhero .bars i{display:block;height:14px;border-radius:7px}
+.checkhero h1{color:#fff;margin:0 0 10px;font-size:2rem;line-height:1.15}
+.checkhero p{color:#DCE9E6;margin:0;max-width:56ch}
+</style></head><body>
+<header class="site"><a class="brand" href="../../"><img src="../../assets/brand/lockup.svg" alt="Sensible Stack"></a>
+<nav class="main"><span class="hasdrop"><a href="../../tools/">Reviews</a><span class="drop"><a href="../../tools/#pm">Project management</a><a href="../../tools/#crm">CRM and sales</a><a href="../../tools/#email">Email marketing</a><a href="../../tools/#video">Video and AI</a><a href="../../tools/#found">Getting found</a><a href="../../tools/#segments">By business type</a></span></span><a href="../../compare/">Comparisons</a><a href="../../guides/">Guides</a><a href="../../how-we-rate/">How We Rate</a><a href="../../about/">About</a></nav></header>
+<div class="wrap">
+<p class="small">The Journal · Fix series · Preview draft, November 2026, not published</p>
+<div class="checkhero"><div class="bars"><i style="width:120px;background:#F2A93B"></i><i style="width:170px;background:#fff"></i><i style="width:220px;background:#7FC6B8"></i></div>
+<h1>Your Jotform notifications stopped arriving, and the test button is lying to you</h1>
+<p>The submissions are sitting in Jotform, safe and sound. The notification emails that were supposed to tell you about them have quietly stopped, and every test you run says email is working fine. Both halves of that sentence have a cause, and neither is the one you would guess.</p></div>
+
+<p><em>Fix series, post two. Basis, stated plainly: we hold a Jotform account, and our Jotform coverage is labelled Research only, because we have not yet run production forms on it. This fix is not a war story. It is taken from Jotform's own help guide, checked against its support team's published answers, and we will update this post when our own usage data lands.</em></p>
+<p><em>This post contains one affiliate link, to Jotform, marked where it appears.</em></p>
+
+<h2>The symptom</h2>
+<p>A form that used to email you every submission stops emailing. Nothing has been changed, nothing looks broken, and the submissions themselves are all there when you log in. Or the second half of the pattern: you get the notifications, but a colleague or a client address on the same form never does, and their copy has never arrived.</p>
+
+<h2>The cause: the bounce list</h2>
+<p>Jotform keeps a bounce list. When an email to an address bounces, a full mailbox, a server that rejects the message, an address that no longer exists, Jotform adds that address to the list and stops sending to it. Entirely. Every form, every notification, until the address is removed.</p>
+<p>The reasoning is sound: too many bounces damage delivery for everyone sending through Jotform, so the platform blocks the address until the underlying problem is fixed. What is not sound is the silence. There is no banner in your account saying an address has been blocked. The notifications just stop, and the form looks healthy, because the form is healthy. The block sits on the address, not on the form.</p>
+
+<h2>The trap: the Test Email button</h2>
+<p>Here is the part that sends people round in circles for days. In the form's email settings there is a Test Email button, and it feels like the obvious way to check whether notifications work.</p>
+<p>It does not test your notification. Jotform's own support team states it plainly in its published answers: the Test Email button sends only to your Jotform account email address, regardless of the recipients you have configured. So the test can succeed, cheerfully, while the actual recipients of the form get nothing at all. If the address that is failing belongs to somebody else, the test button cannot even see the problem.</p>
+
+<h2>The fix, in the order to try it</h2>
+<p><strong>1. Test properly, with a real submission.</strong> Fill in the form yourself, exactly as a visitor would, and submit it. That is the only test that exercises the real notification, the real recipients and the real delivery path. Everything below assumes a real submission, not the test button.</p>
+<p><strong>2. Work out whether the email was even sent.</strong> In your account history you will find email logs, showing whether a notification was generated and what happened to it. If no email was generated, the notification itself is missing or switched off: look under the form's Settings, then Emails, and recreate the notification from scratch if it is not there. If the email was generated but never arrived, the problem is delivery, and the next step is the likeliest culprit.</p>
+<p><strong>3. Clear the bounce list.</strong> On your Workspace page, click your profile picture at the top right, then Settings. On the account settings page, find the Bounce List section, click Check, and if your address is listed, click Remove From Bounce List. One limit worth knowing before you waste an afternoon: you can only remove your own account email address this way. If the blocked address belongs to a colleague or a client, Jotform Support has to remove it for you.</p>
+<p><strong>4. Check the recipients, and your plan.</strong> In the form builder, Settings, then Emails, open the notification and read the Recipients tab character by character. A typo in one address produces exactly this symptom for exactly that person. And if a second recipient never receives anything, check your plan before you check anything else: on the free Starter plan each notification is limited to one recipient. Extra addresses are a paid plan feature, so a silent second recipient can be a plan limit wearing a fault's clothing.</p>
+<p><strong>5. Spam folders and whitelisting.</strong> Ask every affected recipient to check spam and junk, and to mark a found Jotform message as not spam. Adding noreply@jotform.com to the address book or allow list helps, and Jotform publishes a guide to whitelisting its sending addresses and IPs for stricter corporate filters.</p>
+
+<h2>Stop it happening again</h2>
+<p>Removing an address from the bounce list fixes the block, not the bounce. If the mailbox is still full, or the filter still rejects Jotform's mail, the address will bounce again and go straight back on the list. Fix the mailbox problem first, then remove the address. If an address keeps landing on the list despite a healthy mailbox, Jotform's own guide recommends the durable fix: set up your own SMTP sender, so notifications go out through your own domain instead of Jotform's.</p>
+
+<h2>The honest limits</h2>
+<p>The bounce list is the likeliest cause, not the only one. A notification can be eaten by a corporate filter after a clean delivery, and no setting inside Jotform can fix somebody else's mail server. The support step for third party addresses is also a genuine friction: the one person who cannot receive the email is the one person who cannot clear their own block, because the self service removal only covers the account address.</p>
+
+<h2>How we checked this</h2>
+<p>Jotform's help guide, <a href="https://www.jotform.com/help/262-how-to-remove-your-email-address-from-bounce-list/">How to Remove Your Email Address From the Bounce List</a>, sets out the bounce list behaviour and the removal steps quoted above, including the own address limit and the SMTP recommendation. The Test Email behaviour is stated by Jotform's support team in its published answers of 3 and 5 November 2026, and the email logs and one recipient limit on the free plan appear in the same answers. All checked on 19 November 2026.</p>
+
+<p><em>Jotform is one of the programmes that pay us: 30% of the subscription, recurring, set out on our <a href="../../affiliate-disclosure/">Affiliate Disclosure</a> page. If you are signing up anyway, our link is <a href="https://sensiblestack.io/go/jotform" rel="sponsored">sensiblestack.io/go/jotform</a>. Until 30 November 2026 it also carries Jotform's Black Friday offer, 60% off annual Bronze, Silver and Gold plans, per Jotform's partner email of 19 November 2026.</em></p>
+<p><em>Next in this series: the workflow that never fires, and the calendar that double books, both in HighLevel.</em></p>
+</div>
+</body></html>
