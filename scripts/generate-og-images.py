@@ -36,6 +36,13 @@ WIDTH = 1200
 HEIGHT = 630
 MAX_BYTES = 200 * 1024
 SITE = "https://weusedithq.com"
+# Wordmark matches assets/brand/lockup.svg: "We Used It" over "HQ".
+# The domain is drawn on the card so a share preview names the site.
+BRAND_LINE_A = "We Used It"
+BRAND_LINE_B = "HQ"
+BRAND_DOMAIN = "weusedithq.com"
+WORDMARK_SIZE = 36
+DOMAIN_SIZE = 20
 
 # icon.svg, inlined so the screenshot does not depend on a second request.
 ICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" aria-hidden="true">
@@ -158,9 +165,10 @@ body{{font-family:Inter,"Helvetica Neue",Arial,sans-serif;color:#fff;background:
 .brand{{display:flex;align-items:center;gap:18px}}
 .mark{{background:#fff;border-radius:22px;padding:7px;line-height:0;box-shadow:0 10px 24px rgba(0,0,0,.22)}}
 .mark svg{{width:78px;height:78px;display:block}}
-.wordmark{{line-height:.9}}
-.wordmark .a{{display:block;font-weight:700;font-size:42px;letter-spacing:-.8px}}
-.wordmark .b{{display:block;font-weight:400;font-size:42px;letter-spacing:-.6px;color:#7FC6B8}}
+.wordmark{{line-height:.92}}
+.wordmark .a{{display:block;font-weight:700;font-size:{WORDMARK_SIZE}px;letter-spacing:-.6px}}
+.wordmark .b{{display:block;font-weight:400;font-size:{WORDMARK_SIZE}px;letter-spacing:-.4px;color:#7FC6B8}}
+.wordmark .domain{{display:block;margin-top:8px;font-weight:600;font-size:{DOMAIN_SIZE}px;letter-spacing:.01em;color:#D7EBE6}}
 .main{{flex:1;display:flex;align-items:center;gap:36px;min-height:0}}
 h1{{margin:0;flex:1 1 auto;min-width:0;font-weight:800;font-size:{size}px;line-height:1.04;letter-spacing:-1.6px;color:#fff;text-wrap:balance}}
 .score{{flex:0 0 236px;background:#F2A93B;color:#092932;border-radius:28px;text-align:center;padding:22px 18px 18px}}
@@ -174,14 +182,14 @@ h1{{margin:0;flex:1 1 auto;min-width:0;font-weight:800;font-size:{size}px;line-h
 <div class="bg"></div>
 <div class="card">
   <div class="brand"><span class="mark">{ICON_SVG}</span>
-    <div class="wordmark"><span class="a">Sensible</span><span class="b">Stack</span></div>
+    <div class="wordmark"><span class="a">{html.escape(BRAND_LINE_A)}</span><span class="b">{html.escape(BRAND_LINE_B)}</span><span class="domain">{html.escape(BRAND_DOMAIN)}</span></div>
   </div>
   <div class="main"><h1>{html.escape(title)}</h1>{score_html}</div>
   <div class="edge"></div>
 </div>
 <script>
 document.fonts.ready.then(function () {{
-  var ok = document.fonts.check("800 {size}px Inter") && document.fonts.check("700 42px Inter") && document.fonts.check("400 42px Inter");
+  var ok = document.fonts.check("800 {size}px Inter") && document.fonts.check("700 {WORDMARK_SIZE}px Inter") && document.fonts.check("400 {WORDMARK_SIZE}px Inter") && document.fonts.check("600 {DOMAIN_SIZE}px Inter");
   document.documentElement.setAttribute("data-font-ok", ok ? "1" : "0");
 }});
 </script>
