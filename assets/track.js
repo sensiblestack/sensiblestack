@@ -8,10 +8,13 @@ document.addEventListener('click', function (e) {
   if (!link) return;
   var href = link.getAttribute('href') || '';
   var match = href.match(/\/go\/([a-z0-9-]+)\/?(?:[?#]|$)/);
+  var cta = link.getAttribute('data-cta') || '';
   if (window.__ssAnalytics && typeof gtag === 'function') {
-    gtag('event', 'affiliate_click', {
-      tool: match ? match[1] : 'unknown',
+    var params = {
+      tool: match ? match[1] : (cta || 'unknown'),
       page_path: window.location.pathname
-    });
+    };
+    if (cta) params.cta = cta;
+    gtag('event', 'affiliate_click', params);
   }
 });
