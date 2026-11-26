@@ -19,7 +19,7 @@ Plain redirects today: `go/airtable/`, `go/aitable/`, `go/asana/`, `go/clickfunn
 
 ## Pages
 
-Home, About, How We Rate, Affiliate Disclosure, Privacy, Contact, 12 comparisons, 6 guides, 7 business-type pages, 16 tool reviews, 4 journal posts, and 1 setup guide (HighLevel).
+Home, About, How We Rate, Affiliate Disclosure, Privacy, Contact, 12 comparisons, 6 guides, 7 business-type pages, 17 tool reviews, 4 journal posts, and 1 setup guide (HighLevel).
 
 ## Drafts
 
