@@ -15,11 +15,11 @@ Enrolled programmes. These redirects already carry a real referral id. Leave the
 
 Every other `go/<tool>/` redirect is a plain provider URL. Those programmes are not enrolled. Do not describe them as affiliate links on the site until the destination in that one file is a real affiliate URL.
 
-Plain redirects today: `go/airtable/`, `go/aitable/`, `go/asana/`, `go/clickup/`, `go/coda/`, `go/descript/`, `go/elevenlabs/`, `go/fireflies/`, `go/hubspot/`, `go/kinsta/`, `go/kit/`, `go/monday/`, `go/motion/`, `go/notion/`, `go/projectmanager/`, `go/reclaim/`, `go/semrush/`, `go/synthesia/`, `go/teamwork/`, `go/todoist/`, `go/wpengine/`, `go/wrike/`.
+Plain redirects today: `go/airtable/`, `go/aitable/`, `go/asana/`, `go/clickfunnels/`, `go/clickup/`, `go/coda/`, `go/descript/`, `go/elevenlabs/`, `go/fireflies/`, `go/google-forms/`, `go/hubspot/`, `go/kartra/`, `go/kinsta/`, `go/kit/`, `go/klaviyo/`, `go/monday/`, `go/motion/`, `go/notion/`, `go/pipedrive/`, `go/projectmanager/`, `go/reclaim/`, `go/salesforce/`, `go/semrush/`, `go/synthesia/`, `go/systeme/`, `go/teamwork/`, `go/todoist/`, `go/wpengine/`, `go/wrike/`, `go/zapier/`, `go/zoho/`.
 
 ## Pages
 
-Home, About, How We Rate, Affiliate Disclosure, Privacy, Contact, 12 comparisons, 6 guides, 7 business-type pages, 16 tool reviews, 4 journal posts, and 1 setup guide (HighLevel).
+Home, About, How We Rate, Affiliate Disclosure, Privacy, Contact, 12 comparisons, 6 guides, 7 business-type pages, 17 tool reviews, 4 journal posts, and 1 setup guide (HighLevel).
 
 ## Drafts
 

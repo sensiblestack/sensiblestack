@@ -82,8 +82,10 @@ def page_title(source: str) -> str:
 
 
 def card_title(title: str, kind: str) -> str:
-    # Reviews read as "HighLevel Review 2026" on the card.
-    if kind == "review" and not title.endswith("2026"):
+    # Reviews read as "HighLevel Review 2026" on the card. Titles that
+    # already name the year, such as "Jotform Review 2026: Pricing, Pros
+    # & Cons", are used as they stand.
+    if kind == "review" and "2026" not in title:
         return f"{title} 2026"
     return title
 
