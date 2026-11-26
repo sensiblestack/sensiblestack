@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /preview/
 Disallow: /go/
 
 Sitemap: https://sensiblestack.io/sitemap.xml

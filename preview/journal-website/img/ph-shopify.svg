@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Shopify theme editor interface placeholder">
-<rect width="800" height="450" fill="#f4f6f8"/>
-<rect x="0" y="0" width="800" height="46" fill="#123332"/>
-<circle cx="28" cy="23" r="7" fill="#2fbf9b"/><circle cx="52" cy="23" r="7" fill="#e8ecef"/><circle cx="76" cy="23" r="7" fill="#e8ecef"/>
-<text x="110" y="30" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Shopify theme editor</text>
-<rect x="20" y="66" width="250" height="300" rx="6" fill="#ffffff"/><rect x="290" y="66" width="490" height="300" rx="6" fill="#ffffff"/><rect x="36" y="84" width="218" height="20" rx="6" fill="#123332"/><rect x="36" y="120" width="218" height="14" rx="6" fill="#dfe6ea"/><rect x="36" y="148" width="218" height="14" rx="6" fill="#dfe6ea"/><rect x="36" y="176" width="218" height="14" rx="6" fill="#2fbf9b"/><rect x="36" y="214" width="218" height="14" rx="6" fill="#dfe6ea"/><rect x="36" y="242" width="218" height="14" rx="6" fill="#dfe6ea"/><rect x="36" y="280" width="120" height="30" rx="6" fill="#123332"/><rect x="310" y="86" width="450" height="120" rx="6" fill="#e8ecef"/><rect x="310" y="222" width="210" height="60" rx="6" fill="#dfe6ea"/><rect x="536" y="222" width="210" height="60" rx="6" fill="#dfe6ea"/><rect x="310" y="298" width="450" height="20" rx="6" fill="#dfe6ea"/>
-<text x="400" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#123332">Shopify theme editor</text>
-<text x="400" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#5b6b6a">Interface placeholder, real capture to follow</text>
-</svg>

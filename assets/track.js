@@ -8,7 +8,7 @@ document.addEventListener('click', function (e) {
   if (!link) return;
   var href = link.getAttribute('href') || '';
   var match = href.match(/\/go\/([a-z0-9-]+)\/?(?:[?#]|$)/);
-  if (typeof gtag === 'function') {
+  if (window.__ssAnalytics && typeof gtag === 'function') {
     gtag('event', 'affiliate_click', {
       tool: match ? match[1] : 'unknown',
       page_path: window.location.pathname
