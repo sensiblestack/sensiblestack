@@ -20,3 +20,17 @@ Plain redirects today: `go/airtable/`, `go/aitable/`, `go/asana/`, `go/clickup/`
 ## Pages
 
 Home, About, How We Rate, Affiliate Disclosure, Privacy, Contact, 12 comparisons, 6 guides, 7 business-type pages, 16 tool reviews, 4 journal posts, and 1 setup guide (HighLevel).
+
+## Drafts
+
+Unpublished drafts are not on `main`, so GitHub Pages does not serve them. They are on the branch `cursor/site-drafts-d94d`, still under `preview/`.
+
+To read one locally:
+
+```
+git fetch origin cursor/site-drafts-d94d
+git checkout cursor/site-drafts-d94d
+python3 -m http.server
+```
+
+Then open `http://127.0.0.1:8000/preview/` plus the draft folder, for example `http://127.0.0.1:8000/preview/make/`.
