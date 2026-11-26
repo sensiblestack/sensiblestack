@@ -3,7 +3,7 @@
 
 Each card is HTML, set in the site's self-hosted Inter faces and brand
 colours, screenshotted with headless Chrome at 1200x630, then saved as an
-optimised JPEG under assets/og/. Review cards include the Sensible Score
+optimised JPEG under assets/og/. Review cards include the We Used It Score
 when the page publishes one. The matching page gets og:image,
 og:image:width, og:image:height, twitter:card=summary_large_image and
 twitter:image.
@@ -41,6 +41,7 @@ SITE = "https://weusedithq.com"
 BRAND_LINE_A = "We Used It"
 BRAND_LINE_B = "HQ"
 BRAND_DOMAIN = "weusedithq.com"
+SCORE_LABEL = "We Used It Score"
 WORDMARK_SIZE = 36
 DOMAIN_SIZE = 20
 
@@ -146,7 +147,7 @@ def card_html(title: str, score: str | None) -> str:
     score_html = ""
     if score is not None:
         score_html = (
-            '<div class="score"><p class="label">Sensible Score</p>'
+            f'<div class="score"><p class="label">{html.escape(SCORE_LABEL)}</p>'
             f'<p class="num">{html.escape(score)}</p>'
             '<p class="of">out of 10</p></div>'
         )
@@ -173,7 +174,7 @@ body{{font-family:Inter,"Helvetica Neue",Arial,sans-serif;color:#fff;background:
 h1{{margin:0;flex:1 1 auto;min-width:0;font-weight:800;font-size:{size}px;line-height:1.04;letter-spacing:-1.6px;color:#fff;text-wrap:balance}}
 .score{{flex:0 0 236px;background:#F2A93B;color:#092932;border-radius:28px;text-align:center;padding:22px 18px 18px}}
 .score p{{margin:0}}
-.score .label{{font-weight:800;font-size:15px;letter-spacing:.12em;text-transform:uppercase}}
+.score .label{{font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}}
 .score .num{{font-weight:800;font-size:92px;line-height:.88;letter-spacing:-3px;margin-top:6px}}
 .score .of{{font-weight:700;font-size:22px;margin-top:4px}}
 .edge{{position:absolute;left:0;right:0;bottom:0;height:14px;background:#F2A93B}}
