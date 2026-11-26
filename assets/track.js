@@ -4,9 +4,11 @@
 // carrying the tool slug, the page the click happened on, and where on
 // the page the link sat (data-cta, or "inline" when that attribute is
 // absent). The same value is sent as both cta and cta_position.
+// The mobile bar uses data-cta="sticky", so those clicks report
+// cta_position=sticky.
 // Fires "email_signup_click" for the checklist email CTA.
-// Both events fire only after cookie consent turns analytics on.
-// Mark "affiliate_click" as a key event in GA4.
+// Both events fire only after cookie consent turns analytics on
+// (window.__ssAnalytics). Mark "affiliate_click" as a key event in GA4.
 document.addEventListener('click', function (e) {
   var link = e.target.closest ? e.target.closest('a') : null;
   if (!link) return;
