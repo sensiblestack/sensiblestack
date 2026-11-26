@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /go/
 
-Sitemap: https://sensiblestack.io/sitemap.xml
+Sitemap: https://weusedithq.com/sitemap.xml

@@ -1,4 +1,4 @@
-# Sensible Stack (live site)
+# We Used It HQ (live site)
 
 Static site for GitHub Pages. Plain HTML and one stylesheet, no build step.
 

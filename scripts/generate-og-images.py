@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Sensible Stack Open Graph images and refresh social meta tags.
+"""Generate We Used It HQ Open Graph images and refresh social meta tags.
 
 Each card is HTML, set in the site's self-hosted Inter faces and brand
 colours, screenshotted with headless Chrome at 1200x630, then saved as an
@@ -35,7 +35,7 @@ FONTS = ROOT / "assets" / "fonts"
 WIDTH = 1200
 HEIGHT = 630
 MAX_BYTES = 200 * 1024
-SITE = "https://sensiblestack.io"
+SITE = "https://weusedithq.com"
 
 # icon.svg, inlined so the screenshot does not depend on a second request.
 ICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" aria-hidden="true">

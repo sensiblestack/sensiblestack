@@ -1,4 +1,4 @@
-// Sensible Stack click tracking.
+// We Used It HQ click tracking.
 // Fires a GA4 event named "affiliate_click" whenever a visitor clicks a
 // link into a /go/<tool> redirect, with or without a trailing slash,
 // carrying the tool slug, the page the click happened on, and where on
