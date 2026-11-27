@@ -2,8 +2,8 @@
 """Generate We Used It HQ Open Graph images and refresh social meta tags.
 
 Each card is HTML, set in the site's self-hosted Inter faces and brand
-colours, screenshotted with headless Chrome at 1200x630, then saved as an
-optimised JPEG under assets/og/. Review cards include the We Used It Score
+colors, screenshotted with headless Chrome at 1200x630, then saved as an
+optimized JPEG under assets/og/. Review cards include the We Used It Score
 when the page publishes one. The matching page gets og:image,
 og:image:width, og:image:height, twitter:card=summary_large_image and
 twitter:image.
