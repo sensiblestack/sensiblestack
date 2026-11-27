@@ -33,3 +33,32 @@ document.addEventListener('keydown', function (e) {
     }
   });
 });
+
+// Mobile menu: inject a toggle button so the header works on narrow screens
+// without editing every page. CSS only collapses the nav when .has-burger is set.
+(function () {
+  var header = document.querySelector('header.site');
+  var nav = header && header.querySelector('nav.main');
+  if (!nav || header.querySelector('.nav-burger')) return;
+  if (!nav.id) nav.id = 'site-nav';
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'nav-burger';
+  btn.setAttribute('aria-controls', nav.id);
+  btn.setAttribute('aria-expanded', 'false');
+  btn.setAttribute('aria-label', 'Menu');
+  btn.innerHTML = '<span class="bars" aria-hidden="true"></span><span class="label">Menu</span>';
+  header.insertBefore(btn, nav);
+  header.classList.add('has-burger');
+  function setOpen(open) {
+    header.classList.toggle('nav-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function () { setOpen(!header.classList.contains('nav-open')); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && header.classList.contains('nav-open') && !nav.querySelector('.hasdrop.open')) {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+})();

@@ -284,3 +284,57 @@ a.brandname:hover{color:var(--amber-dark)}
   .choosepair{grid-template-columns:1fr}
   .wrap table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 }
+
+/* Mobile menu (toggle injected by assets/nav.js) */
+.nav-burger{display:none}
+@media (max-width:760px){
+  header.site.has-burger{flex-wrap:wrap}
+  .has-burger .nav-burger{display:inline-flex;align-items:center;gap:8px;margin-left:auto;min-height:44px;padding:8px 14px;border:1.5px solid var(--line);border-radius:999px;background:#fff;color:var(--teal);font:inherit;font-weight:700;font-size:15px;cursor:pointer}
+  .nav-burger .bars,.nav-burger .bars::before,.nav-burger .bars::after{display:block;width:18px;height:2px;border-radius:2px;background:currentColor;transition:transform .2s ease,opacity .2s ease}
+  .nav-burger .bars{position:relative}
+  .nav-burger .bars::before,.nav-burger .bars::after{content:"";position:absolute;left:0}
+  .nav-burger .bars::before{top:-6px}
+  .nav-burger .bars::after{top:6px}
+  .nav-open .nav-burger .bars{background:transparent}
+  .nav-open .nav-burger .bars::before{transform:translateY(6px) rotate(45deg)}
+  .nav-open .nav-burger .bars::after{transform:translateY(-6px) rotate(-45deg)}
+  .has-burger nav.main{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;flex-wrap:nowrap;gap:0;margin:6px 0 0;padding:0;overflow:visible;border-top:1px solid var(--line)}
+  .has-burger.nav-open nav.main{display:flex}
+  .has-burger nav.main>a,.has-burger .hasdrop>a{padding:13px 4px;font-size:16px;border-bottom:1px solid var(--line)}
+  .has-burger nav.main>a:hover{border-bottom-color:var(--line);color:var(--amber-dark)}
+  .has-burger .hasdrop{display:flex;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--line)}
+  .has-burger .hasdrop>a{flex:1 1 auto;border-bottom:0}
+  .has-burger .drop-toggle{min-width:48px;min-height:44px;font-size:16px;padding:0 14px}
+  .has-burger .drop-toggle[aria-expanded="true"] span{display:inline-block;transform:rotate(180deg)}
+  .has-burger .hasdrop:hover .drop{display:none}
+  .has-burger .hasdrop .drop{position:static;flex-basis:100%;min-width:0;max-height:none;border:0;border-radius:0;box-shadow:none;padding:0 0 10px 10px}
+  .has-burger .hasdrop.open .drop{display:flex}
+  .has-burger .hasdrop .drop a{white-space:normal}
+}
+
+/* Cookie banner: compact strip instead of a large card */
+.consent{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"t a" "p a";column-gap:22px;align-items:center;max-width:980px;padding:14px 18px}
+.consent h2{grid-area:t;font-size:15px;margin:0 0 2px}
+.consent p{grid-area:p;margin:0;font-size:14px;line-height:1.45;color:var(--muted)}
+.consent-actions{grid-area:a;flex-wrap:nowrap}
+.consent-choice{flex:0 0 auto;padding:9px 20px;font-size:14.5px}
+@media (max-width:640px){
+  .consent{grid-template-columns:1fr;grid-template-areas:"t" "p" "a";left:8px;right:8px;bottom:8px;padding:12px 14px;border-radius:14px}
+  .consent p{font-size:13px;margin-bottom:10px}
+  .consent-choice{flex:1 1 0;padding:8px 12px;min-height:40px}
+}
+
+/* Top picks: one row of four, score badge, buttons aligned */
+.toppicks .disclose{font-size:13.5px;color:var(--muted);margin:6px 0 0}
+.toppicks>.grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.toppicks .card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-rows:auto 1fr auto;column-gap:12px;padding-top:16px}
+.toppicks .card h3{grid-column:2;grid-row:1;align-self:center;margin:0;font-size:19px}
+.toppicks .card .score{grid-column:3;grid-row:1}
+.toppicks .card p{grid-column:1/-1;margin:10px 0 14px}
+.toppicks .card .btn{grid-column:1/-1;align-self:end;justify-self:start;margin-top:0}
+.score{display:flex;flex-direction:column;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;background:var(--mint-tint);border:2px solid var(--mint);color:var(--teal-dark);line-height:1}
+.score b{font-size:19px;font-weight:800;letter-spacing:-.02em}
+.score small{font-size:10.5px;font-weight:600;color:var(--muted);margin-top:2px}
+@media (max-width:1000px){.toppicks>.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.toppicks>.grid{grid-template-columns:1fr}}
+.tile{grid-column:1;grid-row:1;align-self:center;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:var(--teal);color:#fff;font-weight:800;font-size:21px;line-height:1;letter-spacing:-.02em;box-shadow:inset 0 -3px 0 var(--amber)}
