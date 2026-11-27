@@ -62,3 +62,47 @@ document.addEventListener('keydown', function (e) {
     }
   });
 })();
+
+// Screenshots: click or press Enter to view full size.
+(function () {
+  var shots = document.querySelectorAll('figure.shot img');
+  if (!shots.length) return;
+  var box = document.createElement('div');
+  box.className = 'lightbox';
+  box.hidden = true;
+  box.setAttribute('role', 'dialog');
+  box.setAttribute('aria-modal', 'true');
+  box.setAttribute('aria-label', 'Screenshot, full size');
+  box.innerHTML = '<img alt=""><button type="button" class="lightbox-close" aria-label="Close">&times;</button>';
+  document.body.appendChild(box);
+  var big = box.querySelector('img');
+  var closeBtn = box.querySelector('.lightbox-close');
+  var opener = null;
+  function open(img) {
+    opener = img;
+    big.src = img.currentSrc || img.src;
+    big.alt = img.alt || '';
+    box.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+  function close() {
+    box.hidden = true;
+    big.removeAttribute('src');
+    document.documentElement.style.overflow = '';
+    if (opener) opener.focus();
+  }
+  shots.forEach(function (img) {
+    img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+    img.setAttribute('aria-label', 'View full size: ' + (img.alt || 'screenshot'));
+    img.addEventListener('click', function () { open(img); });
+    img.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(img); }
+    });
+  });
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !box.hidden) close();
+  });
+})();
