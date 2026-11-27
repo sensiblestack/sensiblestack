@@ -482,3 +482,7 @@ footer.site button.cookie-settings{font-size:13px}
   .sec-head{align-items:flex-start;flex-direction:column;gap:6px}
 }
 @media (max-width:640px){.biz{justify-content:center}}
+
+/* Evidence note under each review header */
+.evidence{margin:-2px 0 18px;padding:10px 14px;background:var(--mint-tint);border-left:3px solid var(--mint);border-radius:0 10px 10px 0;font-size:14.5px;line-height:1.5;color:var(--teal-dark);max-width:none !important}
+.evidence a{white-space:nowrap}
