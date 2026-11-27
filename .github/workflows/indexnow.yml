@@ -1,0 +1,39 @@
+name: IndexNow
+
+# Runs after GitHub Pages finishes a successful deploy of main,
+# or by hand from the Actions tab (choose "all" to resubmit every page).
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment", "pages build and deployment"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "changed = pages changed in the last deploy, all = every sitemap URL"
+        type: choice
+        options: [all, changed]
+        default: all
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          fetch-depth: 2
+
+      - name: Submit to IndexNow
+        env:
+          MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'changed' }}
+        run: python3 .github/scripts/indexnow.py --mode "$MODE" --head HEAD
