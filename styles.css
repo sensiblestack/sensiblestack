@@ -327,9 +327,9 @@ a.brandname:hover{color:var(--amber-dark)}
 /* Top picks: one row of four, score badge, buttons aligned */
 .toppicks .disclose{font-size:13.5px;color:var(--muted);margin:6px 0 0}
 .toppicks>.grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-.toppicks .card{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr auto;column-gap:12px;padding-top:16px}
-.toppicks .card h3{grid-column:1;grid-row:1;align-self:center;margin:0;font-size:19px}
-.toppicks .card .score{grid-column:2;grid-row:1}
+.toppicks .card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-rows:auto 1fr auto;column-gap:12px;padding-top:16px}
+.toppicks .card h3{grid-column:2;grid-row:1;align-self:center;margin:0;font-size:19px}
+.toppicks .card .score{grid-column:3;grid-row:1}
 .toppicks .card p{grid-column:1/-1;margin:10px 0 14px}
 .toppicks .card .btn{grid-column:1/-1;align-self:end;justify-self:start;margin-top:0}
 .score{display:flex;flex-direction:column;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;background:var(--mint-tint);border:2px solid var(--mint);color:var(--teal-dark);line-height:1}
@@ -337,3 +337,4 @@ a.brandname:hover{color:var(--amber-dark)}
 .score small{font-size:10.5px;font-weight:600;color:var(--muted);margin-top:2px}
 @media (max-width:1000px){.toppicks>.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.toppicks>.grid{grid-template-columns:1fr}}
+.tile{grid-column:1;grid-row:1;align-self:center;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:var(--teal);color:#fff;font-weight:800;font-size:21px;line-height:1;letter-spacing:-.02em;box-shadow:inset 0 -3px 0 var(--amber)}
