@@ -6,14 +6,14 @@ Static site for GitHub Pages. Plain HTML and one stylesheet, no build step.
 
 Calls to action go through a `/go/<tool>/` page, which redirects to the provider. To turn a plain redirect into an affiliate link, or to change one that is already enrolled, edit only that tool's `go/<tool>/index.html`. Articles do not need editing.
 
-Enrolled programmes. These redirects already carry a real referral id. Leave the destination as it is unless the programme itself changes it:
+Enrolled programs. These redirects already carry a real referral id. Leave the destination as it is unless the program itself changes it:
 
 - HighLevel: `go/highlevel/index.html`
 - Jotform: `go/jotform/index.html`
 - Make: `go/make/index.html`
 - Pictory: `go/pictory/index.html`
 
-Every other `go/<tool>/` redirect is a plain provider URL. Those programmes are not enrolled. Do not describe them as affiliate links on the site until the destination in that one file is a real affiliate URL.
+Every other `go/<tool>/` redirect is a plain provider URL. Those programs are not enrolled. Do not describe them as affiliate links on the site until the destination in that one file is a real affiliate URL.
 
 Plain redirects today: `go/airtable/`, `go/aitable/`, `go/asana/`, `go/clickfunnels/`, `go/clickup/`, `go/coda/`, `go/descript/`, `go/elevenlabs/`, `go/fireflies/`, `go/google-forms/`, `go/hubspot/`, `go/kartra/`, `go/kinsta/`, `go/kit/`, `go/klaviyo/`, `go/monday/`, `go/motion/`, `go/notion/`, `go/pipedrive/`, `go/projectmanager/`, `go/reclaim/`, `go/salesforce/`, `go/semrush/`, `go/synthesia/`, `go/systeme/`, `go/teamwork/`, `go/todoist/`, `go/wpengine/`, `go/wrike/`, `go/zapier/`, `go/zoho/`.
 
