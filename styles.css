@@ -530,3 +530,4 @@ article .verdict{background:none;border:0;border-left:3px solid var(--amber);bor
   .qv-score{width:84px;height:84px;min-width:84px}
 }
 @media (max-width:640px){.wrap>.disc,.wrap>p.small:first-child,.wrap>.disc+p.small{font-size:12px;line-height:1.5}}
+.qv-plain{color:var(--teal-mid) !important;font-weight:600}
