@@ -558,3 +558,18 @@ article .verdict{background:none;border:0;border-left:3px solid var(--amber);bor
 .guidehero .rv-meta{color:#A9C4BE}
 .guidehero .btn{background:var(--amber);border-color:var(--amber);color:var(--teal-dark) !important}
 .guidehero .btn:hover{background:#F5B954;border-color:#F5B954}
+
+/* ===== Screenshots: browser frame, source tag, click to enlarge ===== */
+figure.shot{margin:30px 0;position:relative}
+figure.shot>picture,figure.shot>img{display:block;position:relative}
+figure.shot::before{content:"";display:block;height:28px;border:1px solid var(--line);border-bottom:0;border-radius:14px 14px 0 0;background-color:#EEF3F3;background-image:radial-gradient(circle at 16px 14px,#F2A93B 0 4px,transparent 4.5px),radial-gradient(circle at 32px 14px,#7FC6B8 0 4px,transparent 4.5px),radial-gradient(circle at 48px 14px,#C9D6D6 0 4px,transparent 4.5px);background-repeat:no-repeat}
+figure.shot img{display:block;width:100%;height:auto;max-height:620px;object-fit:cover;object-position:top;border:1px solid var(--line);border-radius:0 0 14px 14px;box-shadow:0 14px 34px rgba(14,58,69,.12);cursor:zoom-in;background:#fff}
+figure.shot:hover img{box-shadow:0 18px 44px rgba(14,58,69,.18)}
+figure.shot figcaption{text-align:left;font-size:13.5px;line-height:1.5;color:var(--muted);margin-top:10px;max-width:76ch}
+.src-tag{display:inline-block;margin-right:8px;padding:2px 9px;border-radius:999px;background:var(--teal);color:#fff;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;vertical-align:1px}
+.src-tag.vendor{background:#E6EEEE;color:var(--teal-dark)}
+.lightbox{position:fixed;inset:0;z-index:200;background:rgba(6,22,27,.88);display:flex;align-items:center;justify-content:center;padding:24px;cursor:zoom-out;border:0;margin:0;max-width:none;max-height:none;width:100%;height:100%}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:min(1400px,100%);max-height:100%;width:auto;height:auto;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.5);background:#fff}
+.lightbox-close{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:999px;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+.lightbox-close:focus-visible{outline:3px solid var(--amber)}
