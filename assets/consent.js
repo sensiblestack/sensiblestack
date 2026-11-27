@@ -1,6 +1,9 @@
 // Cookie consent for Google Analytics (Consent Mode v2).
-// Analytics stays off until the visitor chooses Accept. The choice is
-// remembered in localStorage and can be changed from Cookie settings.
+// Visitors in the EU, EEA, UK and Switzerland see a banner, and analytics
+// stays off until they choose Accept. Everyone else gets analytics on by
+// default, unless their browser sends Global Privacy Control, and can turn
+// it off from Cookie settings in the footer. A saved choice always wins
+// and is remembered in localStorage.
 (function () {
   var KEY = 'ss-cookie-consent';
   var GA_ID = 'G-CH4Z3K8NZY';
@@ -99,7 +102,7 @@
 
     var text = document.createElement('p');
     text.id = 'cookie-banner-text';
-    text.textContent = 'We use Google Analytics to see which pages and links are useful. It sets a cookie only if you accept. Rejecting changes nothing you can read.';
+    text.textContent = 'We use Google Analytics, which sets an analytics cookie, to see which pages and links are useful. Reject turns it off and changes nothing you can read.';
 
     var actions = document.createElement('div');
     actions.className = 'consent-actions';
@@ -149,12 +152,41 @@
     }
   }
 
+  // Opt-in is required for visitors in the EU, EEA, UK and Switzerland.
+  // GitHub Pages gives no server-side location, so the region is read from
+  // the browser's time zone. Any Europe/* zone, plus EU and EEA territories
+  // outside it, counts as opt-in. An unknown zone also counts as opt-in, so
+  // the check fails safe.
+  var OPT_IN_ZONES = {
+    'Atlantic/Azores': 1, 'Atlantic/Madeira': 1, 'Atlantic/Canary': 1,
+    'Atlantic/Faroe': 1, 'Atlantic/Reykjavik': 1, 'Arctic/Longyearbyen': 1,
+    'Africa/Ceuta': 1, 'Asia/Nicosia': 1, 'Asia/Famagusta': 1,
+    'America/Guadeloupe': 1, 'America/Martinique': 1, 'America/Cayenne': 1,
+    'America/St_Barthelemy': 1, 'America/Marigot': 1,
+    'Indian/Reunion': 1, 'Indian/Mayotte': 1
+  };
+
+  function needsOptIn() {
+    var tz = '';
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+    if (!tz) return true;
+    return tz.indexOf('Europe/') === 0 || !!OPT_IN_ZONES[tz];
+  }
+
+  // Global Privacy Control is an opt-out signal some US states require
+  // sites to honor, so a browser sending it starts with analytics off.
+  function gpcOn() {
+    return navigator.globalPrivacyControl === true;
+  }
+
   function start() {
     addFooterControl();
     var choice = readChoice();
     if (choice === 'granted') loadGA();
     else if (choice === 'denied') deny();
-    else showBanner();
+    else if (needsOptIn()) showBanner();
+    else if (gpcOn()) deny();
+    else loadGA();
   }
 
   if (document.body) start();
