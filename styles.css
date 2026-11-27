@@ -482,3 +482,51 @@ footer.site button.cookie-settings{font-size:13px}
   .sec-head{align-items:flex-start;flex-direction:column;gap:6px}
 }
 @media (max-width:640px){.biz{justify-content:center}}
+
+/* Evidence note under each review header */
+.evidence{margin:-2px 0 18px;padding:10px 14px;background:var(--mint-tint);border-left:3px solid var(--mint);border-radius:0 10px 10px 0;font-size:14.5px;line-height:1.5;color:var(--teal-dark);max-width:none !important}
+.evidence a{white-space:nowrap}
+
+/* ===== Review pages ===== */
+.wrap>.disc+p.small,.wrap>p.small:first-child{font-size:12.5px;color:var(--muted);margin:8px 0 0;max-width:110ch}
+.wrap>.disc{font-size:13px;padding:0;margin-top:4px}
+article h1{font-size:44px;line-height:1.08;letter-spacing:-.03em;margin:22px 0 14px;max-width:22em}
+.rv-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin:0 0 14px;font-size:13.5px;color:var(--muted)}
+.rv-meta .chip{background:var(--teal);color:#fff;box-shadow:inset 0 -2px 0 var(--amber)}
+article>.evidence{margin:0 0 22px}
+
+/* Verdict box */
+.quickverdict{grid-template-columns:auto minmax(0,1fr) minmax(200px,auto);gap:18px 28px;padding:24px 26px;border-top:0;border-radius:20px;box-shadow:0 10px 34px rgba(14,58,69,.10);position:relative;overflow:hidden}
+.quickverdict::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--amber),var(--mint))}
+.qv-score{position:relative;width:96px;height:96px;min-width:96px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:conic-gradient(var(--teal-mid) calc(var(--pct,70) * 1%),#E6EEEE 0)}
+.qv-score::before{content:"";position:absolute;inset:8px;border-radius:50%;background:#fff}
+.qv-score>*{position:relative}
+.qv-num{font-size:32px;letter-spacing:-.03em;color:var(--teal-dark)}
+.qv-of{font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+.qv-facts dd{font-size:15.5px;line-height:1.5;color:var(--ink)}
+.qv-action{align-items:stretch;max-width:250px}
+.qv-action .btn{text-align:center;padding:13px 22px;font-size:16px;margin:0}
+.qv-note{font-size:12.5px !important;line-height:1.45;color:var(--muted);margin:0 !important}
+article .verdict{background:none;border:0;border-left:3px solid var(--amber);border-radius:0;padding:2px 0 2px 18px;margin:0 0 26px;font-size:17px;line-height:1.65;color:var(--ink)}
+
+/* Score card */
+.scorecard{border-top:0;border-radius:20px;padding:26px 28px;box-shadow:0 10px 34px rgba(14,58,69,.08);background:#fff}
+.scorecard>h3:first-child{display:flex;align-items:baseline;gap:10px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+.scorecard>h3:first-child .big{font-size:40px;letter-spacing:-.03em;color:var(--teal-dark);text-transform:none;margin:0}
+.scorerow{grid-template-columns:220px 1fr 28px;font-size:15px;margin:7px 0}
+.bar,.bar i{height:7px}
+.bar i{background:linear-gradient(90deg,var(--mint),var(--teal-mid))}
+.scorecard h3[style]{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:22px !important}
+
+@media (max-width:820px){
+  article h1{font-size:32px}
+  .quickverdict{grid-template-columns:auto minmax(0,1fr);padding:20px}
+  .qv-action{grid-column:1/-1;max-width:none}
+  .scorerow{grid-template-columns:minmax(0,1fr) 34% 22px;font-size:14px;gap:10px}
+  .scorecard{padding:20px}
+}
+@media (max-width:480px){
+  .quickverdict{grid-template-columns:1fr}
+  .qv-score{width:84px;height:84px;min-width:84px}
+}
+@media (max-width:640px){.wrap>.disc,.wrap>p.small:first-child,.wrap>.disc+p.small{font-size:12px;line-height:1.5}}
