@@ -8,7 +8,7 @@ Calls to action go through a `/go/<tool>/` page, which redirects to the provider
 
 Enrolled programs. These redirects already carry a real referral id. Leave the destination as it is unless the program itself changes it:
 
-- HighLevel: `go/highlevel/index.html`
+- HighLevel: `go/highlevel/index.html` (referral token `john-8cb67f`, as shown under Referral links in the HighLevel affiliate portal. Do not change it unless the portal changes it.)
 - Jotform: `go/jotform/index.html`
 - Make: `go/make/index.html`
 - Pictory: `go/pictory/index.html`
